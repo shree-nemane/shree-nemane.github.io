@@ -76,6 +76,19 @@
             max-height: 1000px; /* Large enough to fit expanded content */
         }
 
+        @media (max-width: 1024px) {
+            .blog-card.expanded {
+                width: 60%; /* Adjust width for tablets */
+            }
+        }
+
+        /* Expanded card width for mobile (small screens) */
+        @media (max-width: 768px) {
+            .blog-card.expanded {
+                width: 100%; /* Full width for mobile screens */
+            }
+        }
+
 
     </style>
 
