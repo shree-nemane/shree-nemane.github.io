@@ -73,16 +73,17 @@
         /* Expanded card width */
         .blog-card.expanded {
             width: 45%; /* Full width for the expanded card */
-            max-height: 1000px; /* Large enough to fit expanded content */
+
+            max-height: 2000px; /* Large enough to fit expanded content */
         }
 
         @media (max-width: 1024px) {
             .blog-card.expanded {
                 width: 60%; /* Adjust width for tablets */
-            }
+            }    
         }
 
-        /* Expanded card width for mobile (small screens) */
+    /* Expanded card width for mobile (small screens) */
         @media (max-width: 768px) {
             .blog-card.expanded {
                 width: 100%; /* Full width for mobile screens */
@@ -100,7 +101,7 @@
     <header class="flex justify-between items-center mx-4 md:mx-8 mt-3">
     
         <!-- ✅ Availability Badge (Always on Left) -->
-        <div class="bg-green-100 border-2 border-green-500 rounded-3xl px-4 md:px-6 py-2 text-xs md:text-sm">
+        <div class="bg-green-100 border-2 border-green-500 rounded-3xl px-4 md:px-6 py-2 text-xs ">
             🟢 Available For Work
         </div>
     
@@ -108,8 +109,8 @@
         <div class="flex items-center gap-4">
             
             <!-- ✅ Email Section (Aligned to Right) -->
-            <div class="flex items-center bg-yellow-100 border-2 border-yellow-400 rounded-3xl px-4 md:px-6 py-2 gap-2">
-                <a class="flex gap-2 z-10 text-xs md:text-sm" href="mailto:shreenemane06@outlook.com"><img class="w-4 md:w-5" src="./assets/socials/email.png" alt="email">My Email</a>
+            <div class="flex items-center bg-yellow-100 border-2 border-yellow-400 rounded-3xl px-4 md:px-5 py-2 gap-2">
+                <a class="flex gap-2 z-10 text-xs " href="mailto:shreenemane06@outlook.com"><img class="w-4 md:w-4" src="./assets/socials/email.png" alt="email">My Email</a>
             </div>
     
             <!-- ✅ Social Links (Hidden on Small Screens) -->
@@ -159,8 +160,8 @@
             
             <!-- 🖼 Left Icons (Hidden on Small Screens) -->
             <div class="hidden md:flex flex-col gap-6 items-end">
-                <img class="w-24 lg:mr-40 md:w-40 animate-bounce" src="./assets/3D_icons/computer.png" alt="">
-                <img class="w-24 md:w-40 animate-bounce" src="./assets/3D_icons/hash.png" alt="">
+                <img class="w-24 lg:mr-40 md:w-36 animate-bounce" src="./assets/3D_icons/computer.png" alt="">
+                <img class="w-24 md:w-36 animate-bounce" src="./assets/3D_icons/hash.png" alt="">
                 <img class="w-24 lg:mr-40 md:w-36 animate-bounce" src="./assets/3D_icons/rupee.png" alt="">
             </div>
     
@@ -172,14 +173,14 @@
                 <!-- 🏆 Profile Picture -->
                 <div class="m-6 flex justify-center">
                     <div class="backdrop-blur-sm bg-white/20 bg-center bg-cover border border-white/30 rounded-[60px] md:rounded-[120px] shadow-xl flex flex-col items-center">
-                        <img src="./assets/profile.jpg" alt="Profile Picture" class="w-40 md:w-96 rounded-[60px] md:rounded-[120px] shadow-xl hover:scale-105 transition-transform duration-500">
+                        <img src="./assets/profile.jpg" alt="Profile Picture" class="w-40 md:w-[23rem] rounded-[60px] md:rounded-[120px] shadow-xl hover:scale-105 transition-transform duration-500">
                     </div>
                 </div>
     
                 <!-- 🚀 Call to Action (Now Centered) -->
                 <div class="flex flex-col justify-center items-center gap-3">
                     <span class="text-sm md:text-lg">Looking for a website designer to bring your ideas to life?</span>
-                    <button class="border-4 border-violet-200 bg-violet-400 text-white px-5 py-2 md:px-6 md:py-3 text-lg md:text-xl font-semibold rounded-xl md:rounded-2xl hover:-translate-y-1 hover:shadow-lg transition-transform duration-500">
+                    <button class="border-4 border-violet-200 bg-violet-400 text-white px-5 py-2 md:px-6 md:py-3 text-lg md:text-lg font-semibold rounded-xl md:rounded-2xl hover:-translate-y-1 hover:shadow-lg transition-transform duration-500">
                         Scroll to Know More ⇩
                     </button>
                 </div>
@@ -187,9 +188,9 @@
     
             <!-- 🎨 Right Icons (Hidden on Small Screens) -->
             <div class="hidden md:flex flex-col gap-6 items-start">
-                <img class="w-24 lg:ml-40 md:w-40 animate-bounce" src="./assets/3D_icons/figma.png" alt="">
-                <img class="w-24 md:w-40 animate-bounce" src="./assets/3D_icons/cup.png" alt="">
-                <img class="w-24 lg:ml-40 md:w-40 animate-bounce" src="./assets/3D_icons/headphone.png" alt="">
+                <img class="w-24 lg:ml-40 md:w-36 animate-bounce" src="./assets/3D_icons/figma.png" alt="">
+                <img class="w-24 md:w-36 animate-bounce" src="./assets/3D_icons/cup.png" alt="">
+                <img class="w-24 lg:ml-40 md:w-36 animate-bounce" src="./assets/3D_icons/headphone.png" alt="">
             </div>
             
         </div>
@@ -276,22 +277,22 @@
         <div class="flex flex-wrap justify-center items-center gap-8 mt-10">
     
             <div class="bg-white shadow-lg p-6 flex flex-col items-center rounded-2xl hover:scale-105 transition-transform duration-500">
-                <img class="w-40 border-b-2 border-gray-400" src="./assets/project/GOOFIES.png" alt="goofies">
-                <p class="w-full sm:w-80 italic mt-5 text-center">
+                <img class="w-32 sm:w-28 md:w-36 border-b-2 border-gray-400" src="./assets/project/GOOFIES.png" alt="goofies">
+                <p class="w-full sm:w-80 sm:text-sm md:text-md italic mt-5 text-center">
                     This is a website I created for my friend group. Check out the website to meet them all.
                 </p>
             </div>
     
             <div class="bg-white shadow-lg p-6 flex flex-col items-center rounded-2xl hover:scale-105 transition-transform duration-500">
-                <img class="w-40 border-b-2 border-gray-400" src="./assets/project/at_ease.png" alt="at">
-                <p class="w-full sm:w-80 italic mt-5 text-center">
+                <img class="w-32 sm:w-28 md:w-36 border-b-2 border-gray-400" src="./assets/project/at_ease.png" alt="at">
+                <p class="w-full sm:w-80 sm:text-sm md:text-md italic mt-5 text-center">
                     This is a copy of a website called At Ease. This was a task given to me in the internship.
                 </p>
             </div>
     
             <div class="bg-white shadow-lg p-6 flex flex-col items-center rounded-2xl hover:scale-105 transition-transform duration-500">
-                <img class="w-40 border-b-2 border-gray-400" src="./assets/project/sizzer.png" alt="sizzer">
-                <p class="w-full sm:w-80 italic mt-5 text-center">
+                <img class="w-32 sm:w-28 md:w-36 border-b-2 border-gray-400" src="./assets/project/sizzer.png" alt="sizzer">
+                <p class="w-full sm:w-80 sm:text-sm md:text-md italic mt-5 text-center">
                     This website showcases the designing skills I gained in my internship.
                 </p>
             </div>
@@ -300,15 +301,15 @@
 
         <div class="flex flex-wrap justify-center items-center gap-8 mt-10 ">
             <div class="bg-white shadow-lg p-6 flex flex-col items-center rounded-2xl hover:scale-105 transition-transform duration-500">
-                <img class="w-40 border-b-2 border-gray-400" src="./assets/project/models.png" alt="models">
-                <p class="w-full sm:w-80 italic mt-5 text-center">
+                <img class="w-32 sm:w-28 md:w-36 border-b-2 border-gray-400" src="./assets/project/models.png" alt="models">
+                <p class="w-full sm:w-80 sm:text-sm md:text-md italic mt-5 text-center">
                     Showcasing multiple machine learning models I have created, like spam detection, classification, and much more.
                 </p>
             </div>
     
             <div class="bg-white shadow-lg p-6 flex flex-col items-center rounded-2xl hover:scale-105 transition-transform duration-500">
-                <img class="w-40 border-b-2 border-gray-400" src="./assets/project/python.png" alt="python">
-                <p class="w-full sm:w-80 italic mt-5 text-center">
+                <img class="w-32 sm:w-28 md:w-36 border-b-2 border-gray-400" src="./assets/project/python.png" alt="python">
+                <p class="w-full sm:w-80 sm:text-sm md:text-md italic mt-5 text-center">
                     I have created multiple Python projects. This is the link to my repository.
                 </p>
             </div>
@@ -329,46 +330,46 @@
         <span class="text-3xl sm:text-4xl text-center font-semibold italic">Skills</span>
     
         <!-- 🏆 Skill Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-5 p-5">
     
             <div class="bg-pink-300/30 backdrop-blur-lg p-6 sm:p-8 lg:p-10 rounded-2xl border border-black/20 shadow-lg">
-                <span class="text-black text-lg sm:text-xl font-semibold italic">Front end</span>
-                <p class="mt-2 text-sm sm:text-base">
+                <span class="text-black sm:text-md lg:text-xl font-semibold italic">Front end</span>
+                <p class="mt-2 text-xs md:text-base">
                     I build Figma-based websites using HTML, Tailwind CSS, and JavaScript, focusing on UI/UX and content while improving responsiveness.
                 </p>
             </div>
     
             <div class="bg-violet-300/30 backdrop-blur-lg shadow-lg border border-black/20 p-6 sm:p-8 lg:p-10 rounded-2xl sm:col-span-2 lg:col-span-2">
-                <span class="text-black text-lg sm:text-xl font-semibold italic">Python</span>
-                <p class="mt-2 text-sm sm:text-base">
+                <span class="text-black text-lg sm:text-md font-semibold italic">Python</span>
+                <p class="mt-2 text-xs md:text-base">
                     I use Python for efficient scripting, automation, and data processing, focusing on writing clean, scalable, and optimized code for various applications, from backend development to data handling and algorithm implementation.
                 </p>
             </div>
     
             <div class="bg-blue-300/30 backdrop-blur-lg border border-black/20 p-6 sm:p-8 lg:p-10 rounded-2xl">
-                <span class="text-black text-lg sm:text-xl font-semibold italic">Personalized Website</span>
-                <p class="mt-2 text-sm sm:text-base">
+                <span class="text-black text-lg sm:text-lg font-semibold italic">Personalized Website</span>
+                <p class="mt-2 text-xs md:text-base">
                     Custom websites that reflect your brand, showcase achievements, and engage your audience.
                 </p>
             </div>
     
             <div class="bg-yellow-300/30 backdrop-blur-lg border border-black/20 p-6 sm:p-8 lg:p-10 rounded-2xl">
-                <span class="text-black text-lg sm:text-xl font-semibold italic">Research</span>
-                <p class="mt-2 text-sm sm:text-base">
+                <span class="text-black text-lg sm:text-lg font-semibold italic">Research</span>
+                <p class="mt-2 text-xs md:text-base">
                     I research AI and bias, focusing on confirmation bias through literature review and model evaluation, combining theory with practical experimentation.
                 </p>
             </div>
     
             <div class="bg-green-300/30 backdrop-blur-lg p-6 border border-black/20 sm:p-8 lg:p-10 rounded-2xl">
-                <span class="text-black text-lg sm:text-xl font-semibold italic">3D Modeling</span>
-                <p class="mt-2 text-sm sm:text-base">
+                <span class="text-black text-lg sm:text-lg font-semibold italic">3D Modeling</span>
+                <p class="mt-2 text-xs md:text-base">
                     I use Blender to create realistic 3D models, focusing on replicating real-life objects with attention to detail and accuracy.
                 </p>
             </div>
     
             <div class="bg-red-300/30 backdrop-blur-lg p-6 border border-black/20 sm:p-8 lg:p-10 rounded-2xl sm:col-span-2 lg:col-span-2">
-                <span class="text-black text-lg sm:text-xl font-semibold italic">ML</span>
-                <p class="mt-2 text-sm sm:text-base">
+                <span class="text-black text-lg sm:text-lg font-semibold italic">ML</span>
+                <p class="mt-2 text-xs md:text-base">
                     I work in Machine Learning, focusing on data processing, model training, and evaluation, applying algorithms to extract insights and develop intelligent solutions.
                 </p>
             </div>
@@ -423,7 +424,7 @@
         <!-- Title -->
         <div class="flex flex-col justify-center items-center px-6 md:px-12 lg:px-20 my-10">
             <span class="text-4xl md:text-5xl lg:text-6xl font-lexend">Blogs -</span>
-            <span class="text-4xl md:text-5xl lg:text-6xl font-lexend font-bold italic">My Thoughts</span>
+            <span class="text-4xl md:text-5xl lg:text-5xl font-lexend font-bold opacity-80 italic">My Thoughts</span>
         </div>
     
         <!-- 📖 Blog Cards -->
@@ -433,9 +434,9 @@
                 <img class="w-16 h-auto rounded-t-xl self-center" src="./assets/galaxy.png" alt="blog1">
                 <h3 class="text-xl font-semibold mt-4 self-center">Why space needs space</h3>
                 <p class="mt-2 text-sm opacity-80">
-                    <span class="short-text">"Space needs space" is almost like saying the universe craves room to exist and expand. In a literal sense, outer space is vast and boundless, and</span>
+                    <span class="short-text">"Space needs space" is almost like saying the universe craves room to exist and expand. In a literal sense, outer space is vast and boundless, and...</span>
                     <span class="full-text hidden"> it's essential for the very structure and dynamics of the cosmos. Without the "space" in space, celestial bodies like stars, planets, and galaxies wouldn't have the room they need to form, move, and interact. The vast void is what allows gravity, light, and other forces to play their roles in shaping the universe.
-                        But this phrasing feels like it might also have a deeper, more philosophical tone. If we think metaphorically, it could be about the importance of "space" in life—space to breathe, grow, and simply be. Just as the stars are scattered across the vastness of the universe, we, too, need our moments of solitude and freedom to shine.</span>
+                        But your phrasing feels like it might also have a deeper, more philosophical tone. If we think metaphorically, it could be about the importance of "space" in life—space to breathe, grow, and simply be. Just as the stars are scattered across the vastness of the universe, we, too, need our moments of solitude and freedom to shine.</span>
                 </p>
                 <button class="toggle-btn mt-3 text-blue-500 font-semibold">Read More</button>
             </article>
@@ -445,7 +446,7 @@
                 <img class="w-16 h-auto rounded-t-xl self-center" src="./assets/i-have-a-dream.png" alt="blog2">
                 <h3 class="text-xl font-semibold mt-4 self-center">Dreams let you live</h3>
                 <p class="mt-2 text-sm opacity-80">
-                    <span class="short-text">Dreams, whether they come while we sleep or in the form of aspirations, have a profound way of breathing life into our existence. They ignite hope, stir</span>
+                    <span class="short-text">Dreams, whether they come while we sleep or in the form of aspirations, have a profound way of breathing life into our existence. They ignite hope, stir...</span>
                     <span class="full-text hidden">creativity, and offer glimpses of possibilities beyond the confines of the present. Dreams are where the mundane transforms into the extraordinary, and where the seeds of ambition and purpose take root.
                         To live with dreams is to embrace the unknown and to fuel the journey of becoming—reminding us that there’s more to life than simply surviving. Do you think dreams are a place of escape, or a way to discover a deeper truth about ourselves?</span>
                 </p>
@@ -460,7 +461,7 @@
         <!-- 🔹 Contact Information -->
         <div class="flex flex-col justify-center items-center md:items-start gap-4">
             <span class="text-2xl md:text-3xl lg:text-4xl font-bold italic">Get in touch</span>
-            <p class="text-base md:text-lg w-full md:w-96 opacity-90">
+            <p class="text-base md:text-md w-full md:w-96 opacity-90">
                 If you're looking for a dedicated developer skilled in frontend, Python, ML, and 3D modeling, ready to contribute and grow, I’d love to connect and explore opportunities!
             </p>
     
