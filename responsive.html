@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.cdnfonts.com/css/getboreg-hollow" rel="stylesheet">
+
+    <link href="https://fonts.cdnfonts.com/css/lexend" rel="stylesheet">
+          
+    <link href="https://fonts.cdnfonts.com/css/fathers-outline" rel="stylesheet">
+
+    <style>
+
+        .font-outline{
+            font-family: 'Fathers Outline', sans-serif;                                  
+        }
+
+        .font-lexend{
+            font-family: 'Lexend', sans-serif;                                  
+        }
+
+        .font-hollow{
+            font-family: 'Getboreg Hollow', sans-serif;                                  
+        }
+
+        .carousel-work {
+            display: flex;
+            white-space: nowrap;
+            overflow: hidden;
+            min-width: 100%;
+        }
+
+        /* Carousel Item Styling */
+        .carousel-item {
+            font-size: 1.5rem; /* Default for small screens */
+            font-weight: bold;
+            color: #9ca3af; /* Tailwind's text-gray-400 */
+            margin-right: 2rem;
+            animation: scroll 20s linear infinite;
+        }
+
+        /* Infinite Scroll Animation */
+        @keyframes scroll {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0%);
+            }
+        }
+
+        /* Adjust speed on different screen sizes */
+        @media (max-width: 768px) {
+            .carousel-item {
+                animation-duration: 15s; /* Slower animation for small screens */
+            }
+        }
+
+        /* Default card width */
+        .blog-card {
+            flex: 0 0 auto; /* Prevent flex-grow */
+            width: calc(33.333% - 1rem); /* Default width for 3 cards per row */
+            transition: all 0.5s ease; /* Smooth transition for width */
+            overflow: hidden; /* Ensure content doesn't overflow */
+            max-height: 300px; /* Default height for collapsed cards */
+            transition: max-height 0.5s ease, width 0.5s ease; /* Smooth height and width transition */
+        }
+
+        /* Expanded card width */
+        .blog-card.expanded {
+            width: 45%; /* Full width for the expanded card */
+            max-height: 1000px; /* Large enough to fit expanded content */
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <!-- Header -->
+
+    <header class="flex justify-between items-center mx-4 md:mx-8 mt-3">
+    
+        <!-- ✅ Availability Badge (Always on Left) -->
+        <div class="bg-green-100 border-2 border-green-500 rounded-3xl px-4 md:px-6 py-2 text-xs md:text-sm">
+            🟢 Available For Work
+        </div>
+    
+        <!-- ✅ Email + Social Links (Always on Right) -->
+        <div class="flex items-center gap-4">
+            
+            <!-- ✅ Email Section (Aligned to Right) -->
+            <div class="flex items-center bg-yellow-100 border-2 border-yellow-400 rounded-3xl px-4 md:px-6 py-2 gap-2">
+                <a class="flex gap-2 z-10 text-xs md:text-sm" href="mailto:shreenemane06@outlook.com"><img class="w-4 md:w-5" src="./assets/socials/email.png" alt="email">My Email</a>
+            </div>
+    
+            <!-- ✅ Social Links (Hidden on Small Screens) -->
+            <nav class="hidden md:flex items-center gap-4">
+                <a class="z-10" href="https://github.com/shree-nemane?tab=repositories" target="_blank" rel="noopener noreferrer" >
+                    <img class="w-4  md:w-5" src="./assets/socials/github.png" alt="github">
+                </a>
+                
+                <a class="z-10" href="https://www.linkedin.com/in/shreedarshan-nemane-455417329/" target="_blank" rel="noopener noreferrer">
+                    <img class="w-4 md:w-5" src="./assets/socials/linkedin-logo.png" alt="linkedin">
+                </a>
+            </nav>
+    
+        </div>
+    
+    </header>
+    
+    <!-- Homepage -->
+
+    <main class="relative flex flex-col items-center justify-center self-center mx-auto h-screen mt-[-2rem] md:flex-row md:px-10">
+    
+        <!-- 🎠 Infinite Carousel (Visible & Behind Elements) -->
+        <div class="absolute -translate-y-1/4 left-0 w-full overflow-hidden z-[-1] opacity-40">
+            <div class="carousel-work flex items-center whitespace-nowrap min-w-max  animate-scroll">
+                <span class="carousel-item text-gray-400 text-6xl md:text-6xl lg:text-9xl font-bold">Learn & Create</span>
+                <span class="carousel-item text-gray-400 text-6xl md:text-6xl lg:text-9xl font-bold">Learn & Create</span>
+                <span class="carousel-item text-gray-400 text-6xl md:text-6xl lg:text-9xl font-bold">Learn & Create</span>
+                <span class="carousel-item text-gray-400 text-6xl md:text-6xl lg:text-9xl font-bold">Learn & Create</span>
+                <span class="carousel-item text-gray-400 text-6xl md:text-6xl lg:text-9xl font-bold">Learn & Create</span>
+
+                <span class="carousel-item text-gray-400 text-6xl md:text-6xl lg:text-9xl font-bold">Learn & Create</span>
+                <span class="carousel-item text-gray-400 text-6xl md:text-6xl lg:text-9xl font-bold">Learn & Create</span>
+                <span class="carousel-item text-gray-400 text-6xl md:text-6xl lg:text-9xl font-bold">Learn & Create</span>
+                <span class="carousel-item text-gray-400 text-6xl md:text-6xl lg:text-9xl font-bold">Learn & Create</span>
+                <span class="carousel-item text-gray-400 text-6xl md:text-6xl lg:text-9xl font-bold">Learn & Create</span>
+            </div>
+        </div>
+        
+        <!-- 🔷 Left Blur Effect -->
+        <div class="absolute inset-y-0 left-0 w-20 mt-12 md:w-60 bg-gradient-to-r from-white via-white/80 to-transparent pointer-events-none"></div>
+    
+        <!-- 🔷 Right Blur Effect -->
+        <div class="absolute inset-y-0 right-0 w-20 mt-12 md:w-60 bg-gradient-to-l from-white via-white/80 to-transparent pointer-events-none"></div>
+        
+        <!-- ✅ Static Content (Above Carousel, Aligned Properly) -->
+        <div class="relative z-10 flex flex-col md:flex-row items-center justify-center lg:gap-20 md:gap-16">
+            
+            <!-- 🖼 Left Icons (Hidden on Small Screens) -->
+            <div class="hidden md:flex flex-col gap-6 items-end">
+                <img class="w-24 lg:mr-40 md:w-40 animate-bounce" src="./assets/3D_icons/computer.png" alt="">
+                <img class="w-24 md:w-40 animate-bounce" src="./assets/3D_icons/hash.png" alt="">
+                <img class="w-24 lg:mr-40 md:w-36 animate-bounce" src="./assets/3D_icons/rupee.png" alt="">
+            </div>
+    
+            <!-- 🔥 Text & Profile (Now Centered in All Screen Sizes) -->
+            <div class="flex flex-col items-center md:items-center text-center md:text-center">
+                <h1 class="text-3xl md:text-5xl font-bold">Hi, I am Shree</h1>
+                <p class="text-sm md:text-lg text-gray-600 max-w-md">I design websites and travel a lot to unknown places</p>
+    
+                <!-- 🏆 Profile Picture -->
+                <div class="m-6 flex justify-center">
+                    <div class="backdrop-blur-sm bg-white/20 bg-center bg-cover border border-white/30 rounded-[60px] md:rounded-[120px] shadow-xl flex flex-col items-center">
+                        <img src="./assets/profile.jpg" alt="Profile Picture" class="w-40 md:w-96 rounded-[60px] md:rounded-[120px] shadow-xl hover:scale-105 transition-transform duration-500">
+                    </div>
+                </div>
+    
+                <!-- 🚀 Call to Action (Now Centered) -->
+                <div class="flex flex-col justify-center items-center gap-3">
+                    <span class="text-sm md:text-lg">Looking for a website designer to bring your ideas to life?</span>
+                    <button class="border-4 border-violet-200 bg-violet-400 text-white px-5 py-2 md:px-6 md:py-3 text-lg md:text-xl font-semibold rounded-xl md:rounded-2xl hover:-translate-y-1 hover:shadow-lg transition-transform duration-500">
+                        Scroll to Know More ⇩
+                    </button>
+                </div>
+            </div>
+    
+            <!-- 🎨 Right Icons (Hidden on Small Screens) -->
+            <div class="hidden md:flex flex-col gap-6 items-start">
+                <img class="w-24 lg:ml-40 md:w-40 animate-bounce" src="./assets/3D_icons/figma.png" alt="">
+                <img class="w-24 md:w-40 animate-bounce" src="./assets/3D_icons/cup.png" alt="">
+                <img class="w-24 lg:ml-40 md:w-40 animate-bounce" src="./assets/3D_icons/headphone.png" alt="">
+            </div>
+            
+        </div>
+    </main>
+    
+
+    <!-- Experience -->
+
+    <section class="flex flex-col justify-center items-center my-16 gap-16 px-6 md:px-12 lg:px-20">
+
+        <div class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10 text-center md:text-left">
+            
+            <!-- 🖼️ Image -->
+            <img src="./assets/nerdtech.png" alt="nerdtech" 
+                 class="w-32 sm:w-40 md:w-48 bg-black rounded-full self-center">
+            
+            <!-- 📄 Text Content -->
+            <div class="flex flex-col gap-4 md:gap-5">
+                
+                <!-- 🏢 Job Title -->
+                <div class="flex flex-col">
+                    <span class="text-2xl sm:text-3xl font-semibold">Web Development Intern</span>
+                    <span class="text-lg sm:text-xl font-semibold border-b-2 pb-2 sm:pb-5 text-gray-700">For 2 months</span>
+                </div>
+    
+                <!-- 📝 Description -->
+                <p class="w-full md:w-96 opacity-80 text-sm sm:text-base">
+                    "Skilled in HTML, Tailwind CSS, and JavaScript with hands-on experience in responsive design, UI/UX implementation, and interactive web interfaces through real-world project development."
+                </p>
+    
+            </div>
+        </div>
+    
+    </section>
+    
+    <!-- Education -->
+
+    <section>
+        <div class="flex flex-col md:flex-row justify-center items-center gap-10 px-6 md:px-20 my-10 mt-32">
+    
+            <!-- 🎓 Graduation -->
+            <div class="text-center md:text-left">
+                <span class="text-2xl md:text-3xl font-semibold">Graduation in BE - AIML</span>
+                <br>
+                <span class="text-gray-600">2022-Present</span>
+                <p class="mt-2 max-w-xs md:max-w-md opacity-80">
+                    Pursuing a degree that sharpens analytical thinking, problem-solving, and innovation. Developing a mindset to adapt, learn, and create impactful solutions in a rapidly evolving world.
+                </p>
+            </div>
+    
+            <!-- 🏫 High School -->
+            <div class="sm:border-l-0 md:border-l-0 lg:border-l-2 pl-0 lg:pl-12 text-center md:text-left">
+                <span class="text-2xl md:text-3xl font-semibold">High School</span>
+                <br>
+                <span class="text-gray-600">2020-2022</span>
+                <p class="mt-2 max-w-xs md:max-w-md opacity-80">
+                    I completed my high school in the PCM stream, where I developed an interest in technology and problem-solving through various academic and extracurricular activities.
+                </p>
+            </div>
+    
+            <!-- 📚 Matriculation -->
+            <div class="sm:border-l-0 md:border-l-0 lg:border-l-2 pl-0 lg:pl-12 text-center md:text-left">
+                <span class="text-2xl md:text-3xl font-semibold">Matriculation</span>
+                <br>
+                <span class="text-gray-600">2019-2020</span>
+                <p class="mt-2 max-w-xs md:max-w-md opacity-80">
+                    Completed foundational education, setting the stage for future academic growth.Built a strong academic foundation while developing curiosity, discipline, and a passion for learning.
+                </p>
+            </div>
+    
+        </div>
+    </section>
+
+    <br>
+    
+    <!-- Work -->
+
+    <section class="flex flex-col mt-20 px-6 md:px-12 lg:px-20">
+
+        <!-- 📌 Title -->
+        <span class="text-3xl sm:text-4xl font-bold text-center">Work Gallery</span>
+    
+        <!-- 📸 Work Items -->
+        <div class="flex flex-wrap justify-center items-center gap-8 mt-10">
+    
+            <div class="bg-white shadow-lg p-6 flex flex-col items-center rounded-2xl hover:scale-105 transition-transform duration-500">
+                <img class="w-40 border-b-2 border-gray-400" src="./assets/project/GOOFIES.png" alt="goofies">
+                <p class="w-full sm:w-80 italic mt-5 text-center">
+                    This is a website I created for my friend group. Check out the website to meet them all.
+                </p>
+            </div>
+    
+            <div class="bg-white shadow-lg p-6 flex flex-col items-center rounded-2xl hover:scale-105 transition-transform duration-500">
+                <img class="w-40 border-b-2 border-gray-400" src="./assets/project/at_ease.png" alt="at">
+                <p class="w-full sm:w-80 italic mt-5 text-center">
+                    This is a copy of a website called At Ease. This was a task given to me in the internship.
+                </p>
+            </div>
+    
+            <div class="bg-white shadow-lg p-6 flex flex-col items-center rounded-2xl hover:scale-105 transition-transform duration-500">
+                <img class="w-40 border-b-2 border-gray-400" src="./assets/project/sizzer.png" alt="sizzer">
+                <p class="w-full sm:w-80 italic mt-5 text-center">
+                    This website showcases the designing skills I gained in my internship.
+                </p>
+            </div>
+    
+        </div>
+
+        <div class="flex flex-wrap justify-center items-center gap-8 mt-10 ">
+            <div class="bg-white shadow-lg p-6 flex flex-col items-center rounded-2xl hover:scale-105 transition-transform duration-500">
+                <img class="w-40 border-b-2 border-gray-400" src="./assets/project/models.png" alt="models">
+                <p class="w-full sm:w-80 italic mt-5 text-center">
+                    Showcasing multiple machine learning models I have created, like spam detection, classification, and much more.
+                </p>
+            </div>
+    
+            <div class="bg-white shadow-lg p-6 flex flex-col items-center rounded-2xl hover:scale-105 transition-transform duration-500">
+                <img class="w-40 border-b-2 border-gray-400" src="./assets/project/python.png" alt="python">
+                <p class="w-full sm:w-80 italic mt-5 text-center">
+                    I have created multiple Python projects. This is the link to my repository.
+                </p>
+            </div>
+        </div>
+
+        <!-- 🎯 CTA Button -->
+        <button class="border-4 border-violet-200 bg-violet-500 text-white mx-auto px-6 py-3 text-lg sm:text-xl font-semibold rounded-full mt-10 hover:-translate-y-1 hover:shadow-lg transition-transform duration-500">
+            Click on Image to Know More
+        </button>
+    
+    </section>
+    
+    
+    <!-- Skills -->
+
+    <section class="flex flex-col px-6 md:px-12 lg:px-36 my-20">
+        <!-- 🔹 Title -->
+        <span class="text-3xl sm:text-4xl text-center font-semibold italic">Skills</span>
+    
+        <!-- 🏆 Skill Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-10">
+    
+            <div class="bg-pink-300/30 backdrop-blur-lg p-6 sm:p-8 lg:p-10 rounded-2xl border border-black/20 shadow-lg">
+                <span class="text-black text-lg sm:text-xl font-semibold italic">Front end</span>
+                <p class="mt-2 text-sm sm:text-base">
+                    I build Figma-based websites using HTML, Tailwind CSS, and JavaScript, focusing on UI/UX and content while improving responsiveness.
+                </p>
+            </div>
+    
+            <div class="bg-violet-300/30 backdrop-blur-lg shadow-lg border border-black/20 p-6 sm:p-8 lg:p-10 rounded-2xl sm:col-span-2 lg:col-span-2">
+                <span class="text-black text-lg sm:text-xl font-semibold italic">Python</span>
+                <p class="mt-2 text-sm sm:text-base">
+                    I use Python for efficient scripting, automation, and data processing, focusing on writing clean, scalable, and optimized code for various applications, from backend development to data handling and algorithm implementation.
+                </p>
+            </div>
+    
+            <div class="bg-blue-300/30 backdrop-blur-lg border border-black/20 p-6 sm:p-8 lg:p-10 rounded-2xl">
+                <span class="text-black text-lg sm:text-xl font-semibold italic">Personalized Website</span>
+                <p class="mt-2 text-sm sm:text-base">
+                    Custom websites that reflect your brand, showcase achievements, and engage your audience.
+                </p>
+            </div>
+    
+            <div class="bg-yellow-300/30 backdrop-blur-lg border border-black/20 p-6 sm:p-8 lg:p-10 rounded-2xl">
+                <span class="text-black text-lg sm:text-xl font-semibold italic">Research</span>
+                <p class="mt-2 text-sm sm:text-base">
+                    I research AI and bias, focusing on confirmation bias through literature review and model evaluation, combining theory with practical experimentation.
+                </p>
+            </div>
+    
+            <div class="bg-green-300/30 backdrop-blur-lg p-6 border border-black/20 sm:p-8 lg:p-10 rounded-2xl">
+                <span class="text-black text-lg sm:text-xl font-semibold italic">3D Modeling</span>
+                <p class="mt-2 text-sm sm:text-base">
+                    I use Blender to create realistic 3D models, focusing on replicating real-life objects with attention to detail and accuracy.
+                </p>
+            </div>
+    
+            <div class="bg-red-300/30 backdrop-blur-lg p-6 border border-black/20 sm:p-8 lg:p-10 rounded-2xl sm:col-span-2 lg:col-span-2">
+                <span class="text-black text-lg sm:text-xl font-semibold italic">ML</span>
+                <p class="mt-2 text-sm sm:text-base">
+                    I work in Machine Learning, focusing on data processing, model training, and evaluation, applying algorithms to extract insights and develop intelligent solutions.
+                </p>
+            </div>
+    
+        </div>
+    </section>
+
+    <!-- Goals -->
+
+    <section class="flex flex-col justify-center items-center px-6 md:px-12 lg:px-20 my-10">
+        <!-- 🔹 Title Section -->
+        <div class="flex flex-col justify-center items-center text-center">
+            <span class="text-4xl md:text-5xl lg:text-6xl font-lexend">Goals -</span>
+            <span class="font-hollow text-4xl md:text-5xl lg:text-6xl">Targets to Achieve</span>
+        </div>
+    
+        <!-- 🎯 Goal Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10 mt-10">
+            <!-- 🏆 Goal 1 -->
+            <article class="flex flex-col justify-center items-center gap-4">
+                <span class="bg-violet-500 text-white rounded-full w-14 h-14 md:w-16 md:h-16 flex justify-center items-center text-xl md:text-2xl font-semibold drop-shadow-lg">1</span>
+                <span class="text-xl md:text-2xl lg:text-3xl font-semibold italic">Learn Python</span>
+                <p class="w-40 md:w-48 text-center opacity-80 text-sm md:text-base">Learn Python & Create</p>
+            </article>
+    
+            <!-- 🎨 Goal 2 -->
+            <article class="flex flex-col justify-center items-center gap-4">
+                <span class="bg-violet-500 text-white rounded-full w-14 h-14 md:w-16 md:h-16 flex justify-center items-center text-xl md:text-2xl font-semibold drop-shadow-md">2</span>
+                <span class="text-xl md:text-2xl lg:text-3xl font-semibold italic">Front-End</span>
+                <p class="w-40 md:w-48 text-center opacity-80 text-sm md:text-base">Paint your vision by code</p>
+            </article>
+    
+            <!-- 🎭 Goal 3 -->
+            <article class="flex flex-col justify-center items-center gap-4">
+                <span class="bg-white text-violet-600 rounded-full w-14 h-14 ring-1 ring-violet-500 md:w-16 md:h-16 flex justify-center items-center text-xl md:text-2xl font-semibold drop-shadow-md">3</span>
+                <span class="text-xl md:text-2xl lg:text-3xl font-semibold italic">Design</span>
+                <p class="w-40 md:w-48 text-center opacity-80 text-sm md:text-base">Understanding designing principles</p>
+            </article>
+    
+            <!-- 🤖 Goal 4 -->
+            <article class="flex flex-col justify-center items-center gap-4">
+                <span class="bg-white text-violet-600 rounded-full w-14 h-14 ring-1 ring-violet-500 md:w-16 md:h-16 flex justify-center items-center text-xl md:text-2xl font-semibold drop-shadow-md">4</span>
+                <span class="text-xl md:text-2xl lg:text-3xl font-semibold italic">ML</span>
+                <p class="w-40 md:w-48 text-center opacity-80 text-sm md:text-base">Learn the new</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Blogs -->
+
+    <section class="my-32">
+        <!-- Title -->
+        <div class="flex flex-col justify-center items-center px-6 md:px-12 lg:px-20 my-10">
+            <span class="text-4xl md:text-5xl lg:text-6xl font-lexend">Blogs -</span>
+            <span class="text-4xl md:text-5xl lg:text-6xl font-lexend font-bold italic">My Thoughts</span>
+        </div>
+    
+        <!-- 📖 Blog Cards -->
+        <div class="flex flex-wrap justify-center gap-6 md:gap-10 px-6 md:px-12 lg:px-20">
+            <!-- 📝 Blog 1 -->
+            <article class="blog-card bg-white shadow-lg p-6 rounded-xl w-full sm:w-[48%] lg:w-[30%] flex flex-col hover:scale-105 transition-all duration-500">
+                <img class="w-16 h-auto rounded-t-xl self-center" src="./assets/galaxy.png" alt="blog1">
+                <h3 class="text-xl font-semibold mt-4 self-center">Why space needs space</h3>
+                <p class="mt-2 text-sm opacity-80">
+                    <span class="short-text">"Space needs space" is almost like saying the universe craves room to exist and expand. In a literal sense, outer space is vast and boundless, and...</span>
+                    <span class="full-text hidden"> it's essential for the very structure and dynamics of the cosmos. Without the "space" in space, celestial bodies like stars, planets, and galaxies wouldn't have the room they need to form, move, and interact. The vast void is what allows gravity, light, and other forces to play their roles in shaping the universe.
+                        But your phrasing feels like it might also have a deeper, more philosophical tone. If we think metaphorically, it could be about the importance of "space" in life—space to breathe, grow, and simply be. Just as the stars are scattered across the vastness of the universe, we, too, need our moments of solitude and freedom to shine.</span>
+                </p>
+                <button class="toggle-btn mt-3 text-blue-500 font-semibold">Read More</button>
+            </article>
+    
+            <!-- 📝 Blog 2 -->
+            <article class="blog-card bg-white shadow-lg p-6 rounded-xl w-full sm:w-[48%] lg:w-[30%] flex flex-col hover:scale-105 transition-all duration-500">
+                <img class="w-16 h-auto rounded-t-xl self-center" src="./assets/i-have-a-dream.png" alt="blog2">
+                <h3 class="text-xl font-semibold mt-4 self-center">Dreams let you live</h3>
+                <p class="mt-2 text-sm opacity-80">
+                    <span class="short-text">Dreams, whether they come while we sleep or in the form of aspirations, have a profound way of breathing life into our existence. They ignite hope, stir...</span>
+                    <span class="full-text hidden">creativity, and offer glimpses of possibilities beyond the confines of the present. Dreams are where the mundane transforms into the extraordinary, and where the seeds of ambition and purpose take root.
+                        To live with dreams is to embrace the unknown and to fuel the journey of becoming—reminding us that there’s more to life than simply surviving. Do you think dreams are a place of escape, or a way to discover a deeper truth about ourselves?</span>
+                </p>
+                <button class="toggle-btn mt-3 text-blue-500 font-semibold">Read More</button>
+            </article>
+        </div>
+    </section>
+ 
+    <!-- Footer -->
+    
+    <div class="flex flex-col md:flex-row justify-center items-center text-center md:text-left my-10 gap-10 md:gap-16 px-6">
+        <!-- 🔹 Contact Information -->
+        <div class="flex flex-col justify-center items-center md:items-start gap-4">
+            <span class="text-2xl md:text-3xl lg:text-4xl font-bold italic">Get in touch</span>
+            <p class="text-base md:text-lg w-full md:w-96 opacity-90">
+                If you're looking for a dedicated developer skilled in frontend, Python, ML, and 3D modeling, ready to contribute and grow, I’d love to connect and explore opportunities!
+            </p>
+    
+            <!-- 📧 Contact Details -->
+            <div class="flex flex-col justify-center items-center md:items-start ">
+                <div class="flex justify-center items-center gap-4">
+                    <a class="z-10" href="https://github.com/shree-nemane?tab=repositories" target="_blank" rel="noopener noreferrer" >
+                        <img class="w-4 opacity-60 md:w-5" src="./assets/socials/github.png" alt="github">
+                    </a>
+                    <a class="z-10" href="https://www.linkedin.com/in/shreedarshan-nemane-455417329/" target="_blank" rel="noopener noreferrer">
+                        <img class="w-4 opacity-60 md:w-5" src="./assets/socials/linkedin-logo.png" alt="linkedin">
+                    </a>
+                    <div class="flex items-center">
+                    <a class="flex gap-2 z-10 text-xs md:text-sm" href="mailto:shreenemane06@outlook.com"><img class="w-4 opacity-60 md:w-5" src="./assets/socials/email.png" alt="email"></a>
+                </div>
+                </div>
+
+                
+                
+            </div>
+        </div>
+    
+        <!-- 🖼️ Images Section -->
+        <div class="flex flex-col justify-center items-center">
+            <img class="w-24 md:w-28 lg:w-32" src="./assets/thanks.png" alt="thanks">
+            <img class="w-24 md:w-28 lg:w-32" src="./assets/bear.png" alt="bear">
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+
+
+
+    
+    <script>
+            // Select all toggle buttons
+            const toggleButtons = document.querySelectorAll(".toggle-btn");
+
+            // Add event listeners to each button
+            toggleButtons.forEach((button) => {
+                button.addEventListener("click", () => {
+                    const article = button.closest("article"); // Get the parent article
+                    const fullText = article.querySelector(".full-text");
+
+                    // Check if the card is already expanded
+                    const isExpanded = article.classList.contains("expanded");
+
+                    // Collapse all cards
+                    document.querySelectorAll(".blog-card").forEach((card) => {
+                        card.classList.remove("expanded");
+                        card.querySelector(".full-text").classList.add("hidden");
+                        card.querySelector(".toggle-btn").textContent = "Read More";
+                    });
+
+                    // Expand the clicked card if it was not already expanded
+                    if (!isExpanded) {
+                        fullText.classList.remove("hidden");
+                        article.classList.add("expanded");
+                        button.textContent = "Read Less";
+                    }
+                });
+            });
+    </script>    
+    
+    
+    
+</body>
+</html>
